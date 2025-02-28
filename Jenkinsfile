@@ -40,4 +40,22 @@ pipeline{
             }
         }
     }
+    post{
+        success{
+            script{
+                emailext from: 'jsonone0@gmail.com'
+                to: 'jsonone0@gmail.com'
+                subject: 'build success'
+                body: 'build is successfull'
+            }
+        }
+        failure{
+            script{
+                emailext from: 'jsonone0@gmail.com'
+                to: 'jsonone0@gmail.com'
+                subject: 'build failure'
+                body: 'build failed'
+            }
+        }
+    }
 }
