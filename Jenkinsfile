@@ -54,7 +54,7 @@ pipeline{
                 emailext from: 'jsonone0@gmail.com'
                 to: 'jsonone0@gmail.com'
                 subject: 'build failure'
-                body: 'build failed'
+                body: "build failed"
             }
         }
     }
